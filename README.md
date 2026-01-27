@@ -2,7 +2,7 @@
 
 This project demonstrates a complete end-to-end AI inventory system using Databricks Free Edition, following Medallion Architecture (Bronze → Silver → Gold), Delta Lake, MLflow, and AI-driven decision logic.
 
-📌 Project Overview
+**Project Overview**
 
 The system:
 
@@ -46,7 +46,7 @@ Example
 
 This allows stakeholders to act immediately without understanding the underlying ML model.
 
-Design Principles
+**Design Principles**
 
 Human-centered AI: Abstract technical outputs into actionable insights
 
@@ -62,7 +62,7 @@ Accounting for demand volatility
 
 Leveraging historical stock-out data for better confidence estimation
 
-Key Features
+**Key Features**
 
 Medallion Architecture: Bronze → Silver → Gold
 
