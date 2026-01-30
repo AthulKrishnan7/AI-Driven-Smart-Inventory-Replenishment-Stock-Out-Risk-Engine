@@ -74,48 +74,7 @@ AI Explainability: Insights table translates model outputs to business decisions
 
 Replenishment Engine: Automatically computes reorder points and quantities
 
+<img width="1024" height="1536" alt="image" src="https://github.com/user-attachments/assets/a2f73815-6299-4d3a-a8af-1cd0200d2145" />
 
-┌──────────────────────────────────────┐
-│            RAW DATA SOURCES           │
-│                                      │
-│  • Sales CSV                          │
-│  • Daily Inventory Snapshot           │
-│  • Supplier Lead Time                 │
-└─────────────────────┬────────────────┘
-                      │
-                      ▼
-┌──────────────────────────────────────┐
-│        🥉 BRONZE LAYER (Raw)          │
-│                                      │
-│  • bronze_sales_raw                  │
-│  • bronze_inventory_snapshot         │
-│  • bronze_suppliers_raw              │
-│                                      │
-│  (Append-only, no transformations)   │
-└─────────────────────┬────────────────┘
-                      │
-                      ▼
-┌──────────────────────────────────────┐
-│      🥈 SILVER LAYER (Cleaned)        │
-│                                      │
-│  • silver_daily_sales                │
-│  • silver_inventory_snapshot         │
-│  • silver_supplier_lead_time         │
-│                                      │
-│  (Validated & standardized data)     │
-└─────────────────────┬────────────────┘
-                      │
-                      ▼
-┌──────────────────────────────────────┐
-│     🥇 GOLD LAYER (AI & Business)     │
-│                                      │
-│  • Demand Feature Engineering        │
-│  • ML Demand Forecast                │
-│  • Stock-Out Risk Scoring             │
-│  • Replenishment Recommendations     │
-│  • AI-Generated Insights              │
-│                                      │
-│  (Decision-ready outputs)            │
-└─────────────────────┬────────────────┘
  
 
