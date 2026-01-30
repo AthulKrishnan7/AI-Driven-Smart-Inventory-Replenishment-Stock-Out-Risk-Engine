@@ -73,3 +73,49 @@ MLflow: Tracks models and experiments
 AI Explainability: Insights table translates model outputs to business decisions
 
 Replenishment Engine: Automatically computes reorder points and quantities
+
+
+┌──────────────────────────────────────┐
+│            RAW DATA SOURCES           │
+│                                      │
+│  • Sales CSV                          │
+│  • Daily Inventory Snapshot           │
+│  • Supplier Lead Time                 │
+└─────────────────────┬────────────────┘
+                      │
+                      ▼
+┌──────────────────────────────────────┐
+│        🥉 BRONZE LAYER (Raw)          │
+│                                      │
+│  • bronze_sales_raw                  │
+│  • bronze_inventory_snapshot         │
+│  • bronze_suppliers_raw              │
+│                                      │
+│  (Append-only, no transformations)   │
+└─────────────────────┬────────────────┘
+                      │
+                      ▼
+┌──────────────────────────────────────┐
+│      🥈 SILVER LAYER (Cleaned)        │
+│                                      │
+│  • silver_daily_sales                │
+│  • silver_inventory_snapshot         │
+│  • silver_supplier_lead_time         │
+│                                      │
+│  (Validated & standardized data)     │
+└─────────────────────┬────────────────┘
+                      │
+                      ▼
+┌──────────────────────────────────────┐
+│     🥇 GOLD LAYER (AI & Business)     │
+│                                      │
+│  • Demand Feature Engineering        │
+│  • ML Demand Forecast                │
+│  • Stock-Out Risk Scoring             │
+│  • Replenishment Recommendations     │
+│  • AI-Generated Insights              │
+│                                      │
+│  (Decision-ready outputs)            │
+└─────────────────────┬────────────────┘
+ 
+
